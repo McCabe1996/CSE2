@@ -57,7 +57,6 @@ public class BigMac {
         
     }//end of main method
     
-    
-    
+
     
 }//end of class
