@@ -23,7 +23,7 @@ public class Cookies {
         int numberPeople;
         int numberCookies;
         int numberDesired;
-        int remainder = 0;
+        //int remainder = 0; //did not end up using this
         int difference; //this will be used to determine amount needed if not enough cookies
         
         //ask user input for number of people
@@ -92,7 +92,7 @@ public class Cookies {
         //determine if there are enough cookies
         if ((numberDesired*numberPeople) > numberCookies) {
             //remainder = (numberDesired*numberPeople)%numberCookies; //finds remainder
-            difference = (numberPeople*numberDesired) - numberCookies;
+            difference = (numberPeople*numberDesired) - numberCookies; //this worked better
             System.out.print("You do not have enough cookies for everyone. ");
             System.out.println("You need at least "+difference+" more.");
             return;
