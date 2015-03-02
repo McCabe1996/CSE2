@@ -27,7 +27,7 @@ public class MakeSymbols {
          
          
         
-        System.out.println("Random number generated: "+randomNumber);
+        System.out.print("Random number generated: "+randomNumber+ "\nThe output pattern: ");
         
         int counter = 0; //declare counter
         
