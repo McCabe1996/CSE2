@@ -17,31 +17,40 @@ public class RunFactorial {
         //prompt user input
         System.out.println("Please enter an integer between 9 and 16 inclusive:");
         
-        int number = 1;//declare
+        double number = myScanner.nextDouble(); //input number, double to check for int later
         int factorial = 1; //factorial of number
         int counter = 1;//used to count loop
         
+        while(number > 16 || number < 9){ //limits
+            System.out.println("Inavalid try again");
+            number = myScanner.nextDouble();
+        }
         
+        while (number %1 != 0) { //good wait to check if not an int
+            System.out.println("Inavalid try again");
+            number = myScanner.nextDouble();
+        }
+        
+        while (number < 0) { //more limits
+             System.out.println("Inavalid try again");
+            number = myScanner.nextDouble();
+            
+        }
         
         
         while (counter <= number) {
             
-            number = myScanner.nextInt(); //input number
             
             if (number <= 16 && number >= 9) {
                 factorial = factorial * counter; //equation for factorial to be looped
                 
                 counter ++; //adds one to counter until we reach input number
             
-                
-            }if (number < 9 || number > 16) {
-                System.out.println("Invalid input, enter again!");
-                
-             }
+            }
             
             
         }//end of while
-        
+        //print result
         System.out.println("Input accepted, "+number+"! = "+factorial);
         
             

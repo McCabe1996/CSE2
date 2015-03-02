@@ -12,9 +12,35 @@ public class MakeSymbols {
     
     public static void main(String[] args){
         
-        int randomNumber = Math.random()*101;
+        int randomNumber = (int)(Math.random()*101); //random 0-100
+         
+        String numberSymbol = ""; //declare string variable
         
-        System.out.println(randomNumber);
+        
+        //set conditions for the string to be used        
+        if (randomNumber % 2 == 0) { //if even
+            numberSymbol = ("*");
+            
+        }else { //if not even
+            numberSymbol = ("&");
+        }
+         
+         
+        
+        System.out.println("Random number generated: "+randomNumber);
+        
+        int counter = 0; //declare counter
+        
+        do { 
+            System.out.print(numberSymbol);
+            counter ++;
+        }while (counter < randomNumber);
+        
+        System.out.println();//new line for terminal
+            
+            
+         
+         
         
         
         
