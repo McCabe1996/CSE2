@@ -40,11 +40,7 @@ public class MakeSymbols {
             
             
          
-         
-        
-        
-        
-    }//end of main method
+         }//end of main method
     
     
 }//end of class

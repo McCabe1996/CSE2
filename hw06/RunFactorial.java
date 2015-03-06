@@ -31,7 +31,7 @@ public class RunFactorial {
             number = myScanner.nextDouble();
         }
         
-        while (number < 0) { //more limits
+        while (number < 0) { //more limits    might not need this but whatevs
              System.out.println("Inavalid try again");
             number = myScanner.nextDouble();
             
