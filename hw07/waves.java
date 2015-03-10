@@ -22,12 +22,7 @@ public class waves {
         
         double number = myScanner.nextDouble(); //declare user input variable
         
-        System.out.println();
-        System.out.println("Using For Loops: ");
-        System.out.println();
-        
-         
-        //make sure number is valid input
+         //make sure number is valid input
         if (number<1 || number>30) {
             System.out.println("You must enter a number [1,30]");
             return;
@@ -37,6 +32,12 @@ public class waves {
             System.out.println("You must enter an integer");
             return;
         }
+        
+        System.out.println();
+        System.out.println("Using For Loops: ");
+        System.out.println();
+        
+         
        
        
         
