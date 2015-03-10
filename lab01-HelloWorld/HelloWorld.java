@@ -8,27 +8,35 @@
 //      java HelloWorld//
 
 //define a class
+
+        
+
+    
+import java.util.Scanner;
 public class HelloWorld{
-//  add main method
     public static void main(String[] args) {
         
-// print the statement with box around it
-    System.out.println("#########################");
-    System.out.println("#########################");
-    System.out.println("#                       #");
-    System.out.println("#   Hello World 2014!!  #");
-    System.out.println("#                       #");
-    System.out.println("#########################");
-    System.out.println("#########################");
-    System.out.println("test");
-    
-    //test/testtest
-    
-    
-    
-    
-    int x = (int)Math.(random()*11) + 1;
-    System.out.println(""+x);
- 
-    }    
+        Scanner myScanner = new Scanner(System.in);
+        
+        int number = myScanner.nextInt();
+        String print = "";
+        for (int i=1; i<=number; i++){
+            if(i%2 == 0) {
+                for (int a=1; a<=i; a++) {
+                    for (int b=1; b<=a; b++){
+                        print = print + i;
+                        
+                    }
+                    System.out.println(print);
+                }
+            }else{
+                for (int c=1; c<=i; c++){
+                    for (int d=1; d<=c; d++){
+                        print = print + i;
+                    }
+                    System.out.println(print);
+                }
+            }
+        }
+    }
 }
