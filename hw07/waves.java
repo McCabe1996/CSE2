@@ -189,7 +189,7 @@ public class waves {
     System.out.println();
 
     //reset count values
-    count = 1;
+    count = 1; 
     count1 = 0;
     count2 = 0;
     count3 = 0;

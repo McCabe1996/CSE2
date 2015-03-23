@@ -11,32 +11,26 @@
 
         
 
-    
-import java.util.Scanner;
-public class HelloWorld{
+    import java.util.Scanner;
+public class HelloWorld {
     public static void main(String[] args) {
-        
-        Scanner myScanner = new Scanner(System.in);
-        
-        int number = myScanner.nextInt();
-        String print = "";
-        for (int i=1; i<=number; i++){
-            if(i%2 == 0) {
-                for (int a=1; a<=i; a++) {
-                    for (int b=1; b<=a; b++){
-                        print = print + i;
-                        
-                    }
-                    System.out.println(print);
-                }
-            }else{
-                for (int c=1; c<=i; c++){
-                    for (int d=1; d<=c; d++){
-                        print = print + i;
-                    }
-                    System.out.println(print);
-                }
-            }
+        Scanner scan = new Scanner(System.in);
+        int sup = scan.nextInt();
+        int sum = 0;
+        for(int i = 1; i <= sup; i++){
+            sum += factorial(i);
         }
+        print(sum);
+  }
+    public static int factorial(int key){
+        int mul = 1;
+        for (int i = 1; i <= key; i++){
+            mul *= i;
+        }
+        System.out.println(mul);
+        return mul;
+    }
+    public static void print(int num){
+        System.out.println("The super factorial is equal to " + num);
     }
 }
