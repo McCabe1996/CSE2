@@ -9,28 +9,67 @@
 
 //define a class
 
+
         
 
     import java.util.Scanner;
 public class HelloWorld {
+    
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int sup = scan.nextInt();
-        int sum = 0;
-        for(int i = 1; i <= sup; i++){
-            sum += factorial(i);
+        
+        Scanner myScanner = new Scanner(System.in);
+        
+        while (true) {
+        
+            int dice1 = (int)(Math.random()*6 + 1);
+            int dice2 = (int)(Math.random()*6 + 1);
+        
+            int sum = result(dice1, dice2);
+            
+            System.out.println("You rolled "+dice1+" + "+dice2+" = "+sum);
+            
+            if (sum == 2 || sum == 3 || sum == 12) {
+                System.out.println("You lose");
+                return;
+            }else if (sum==7||sum==11) {
+                System.out.println("You win");
+                return;
+            }else {
+                System.out.println("Point is: "+sum);
+                
+                while (true) {
+                    dice1 = (int)(Math.random()*6 + 1);
+                    dice2 = (int)(Math.random()*6 + 1);
+                    int sum1 = result(dice1, dice2);
+                    System.out.println("You rolled "+dice1+" + "+dice2+" = "+sum1);
+                
+                    if(sum1 == sum){
+                        System.out.println("You win");
+                        return;
+                    }else if(sum1 == 7) {
+                        System.out.println("You lose");
+                        return;
+                    }else {
+                        continue;
+                    }
+                }
+            }
+            
+            
+        
+        
         }
-        print(sum);
-  }
-    public static int factorial(int key){
-        int mul = 1;
-        for (int i = 1; i <= key; i++){
-            mul *= i;
-        }
-        System.out.println(mul);
-        return mul;
+        
+        
     }
-    public static void print(int num){
-        System.out.println("The super factorial is equal to " + num);
+    
+    public static int result(int x, int y) {
+        
+        int answer = x + y;
+        return answer;
+        
     }
-}
+    
+    
+    
+}  
