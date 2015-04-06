@@ -19,54 +19,25 @@ public class HelloWorld {
         
         Scanner myScanner = new Scanner(System.in);
         
-        while (true) {
+        final int max = 20;
+        int[] number;
+        number = new int[max];
         
-            int dice1 = (int)(Math.random()*6 + 1);
-            int dice2 = (int)(Math.random()*6 + 1);
-        
-            int sum = result(dice1, dice2);
+        for (int i=0; i<max; i++) {
+            number[i] = i;
             
-            System.out.println("You rolled "+dice1+" + "+dice2+" = "+sum);
-            
-            if (sum == 2 || sum == 3 || sum == 12) {
-                System.out.println("You lose");
-                return;
-            }else if (sum==7||sum==11) {
-                System.out.println("You win");
-                return;
-            }else {
-                System.out.println("Point is: "+sum);
-                
-                while (true) {
-                    dice1 = (int)(Math.random()*6 + 1);
-                    dice2 = (int)(Math.random()*6 + 1);
-                    int sum1 = result(dice1, dice2);
-                    System.out.println("You rolled "+dice1+" + "+dice2+" = "+sum1);
-                
-                    if(sum1 == sum){
-                        System.out.println("You win");
-                        return;
-                    }else if(sum1 == 7) {
-                        System.out.println("You lose");
-                        return;
-                    }else {
-                        continue;
-                    }
-                }
-            }
-            
-            
-        
-        
         }
         
         
-    }
-    
-    public static int result(int x, int y) {
-        
-        int answer = x + y;
-        return answer;
+     
+     
+     
+     
+     
+     
+     
+     
+     
         
     }
     
